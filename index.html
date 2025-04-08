@@ -1,0 +1,68 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RECOLECCIÓN DE RESIDUOS MUNICIPALIDAD QUEMÚ QUEMÚ</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+          integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+          crossorigin=""/>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>RECOLECCIÓN DE RESIDUOS MUNICIPALIDAD QUEMÚ QUEMÚ</h1>
+
+    <div class="view-tabs">
+        <button id="daytime-tab" class="tab-button active">RESIDUOS DIURNOS</button>
+        <button id="nighttime-tab" class="tab-button">RESIDUOS NOCTURNOS</button>
+        <button id="special-tab" class="tab-button">RESIDUOS ESPECIALES</button>
+    </div>
+
+    <div id="daytime-content" class="content-section active">
+        <h2>RESIDUOS DIURNOS</h2>
+        <p class="schedule">Horario: de 7 a 13 hs</p>
+        <p>Ramas, Escombros y Especiales</p>
+
+        <div class="container">
+            <div id="map"></div>
+            <div class="controls">
+                <div class="buttons">
+                    <button data-day="lunes">LUNES</button>
+                    <button data-day="martes">MARTES</button>
+                    <button data-day="miercoles">MIÉRCOLES</button>
+                    <button data-day="jueves">JUEVES</button>
+                    <button data-day="reset">LIMPIAR</button>
+                </div>
+                <div id="instructions">
+                    <p>Seleccione un día para ver la zona de recolección y las instrucciones.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="nighttime-content" class="content-section">
+        <h2>RESIDUOS NOCTURNOS</h2>
+        <p class="schedule">Horario: de 20 a 23 hs</p>
+        <p>De cocina (húmedos) y vidrios, cartones (secos)</p>
+        <div class="alert">
+            <p><strong>¡Atención!</strong> Señor vecino, evite dejar las bolsas de basura en la calle o vereda. Idealmente deben estar en el cesto domiciliario.</p>
+        </div>
+        <p>La recolección nocturna cubre toda la localidad.</p>
+    </div>
+
+    <div id="special-content" class="content-section">
+        <h2>RESIDUOS ESPECIALES</h2>
+        <p>Para más información sobre residuos especiales, contactar al corralón Municipal.</p>
+        <div class="special-buttons">
+            <button>Ver Tarifario</button>
+            <button>Enviar Email</button>
+            <button>Llamar al 2953-123456</button>
+        </div>
+    </div>
+
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+            integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+            crossorigin=""></script>
+    <script src="script.js"></script>
+</body>
+</html>
